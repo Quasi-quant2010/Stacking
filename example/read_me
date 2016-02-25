@@ -1,0 +1,2 @@
+[gbdt/adult.data_test.csv]
+accuracy=8.35000e-01, precision=8.93082e-01, recall=8.98734e-01, f=8.95899e-01
