@@ -1,0 +1,64 @@
+├── README.md
+├── config.xml
+├── examples
+│   ├── __init__.py
+│   ├── pca.py
+│   └── pca.py~
+├── experiment
+│   ├── #param_search.py#
+│   ├── __init__.py
+│   ├── __init__.pyc
+│   ├── model_wrappers.py
+
+│   ├── <----- model_wrappersに、GBDT + Linear Classifier用のwaraperを加える
+
+│   ├── model_wrappers.pyc
+│   ├── param_search.py
+│   ├── param_search.pyc
+│   ├── param_search.py~
+│   ├── run_knn_grid_search.py
+│   ├── run_knn_grid_search.pyc
+│   ├── run_knn_grid_search.py~
+│   ├── run_neural_network.py
+│   ├── run_neural_network.py~
+│   ├── run_rand_forest_grid_search.py
+│   ├── run_rand_forest_grid_search.pyc
+│   ├── run_rand_forest_grid_search.py~
+│   ├── run_xgb_param_search.py
+│   ├── run_xgb_param_search.pyc
+│   ├── run_xgb_param_search.py~
+
+│   ├── <----- ここにGBDT + Linear Classifierを加える 
+
+│   └── stacking
+│       ├── __init__.py
+│       ├── __init__.pyc
+│       ├── experiment_l1.py
+│       ├── experiment_l1.pyc
+│       ├── experiment_l1.py~
+│       └── experiment_l2.py
+
+│       ├── <----- ここにとっておいたhold-out setを使って、1-Levelから2-Levelへのマージで使用するweghtを最適化より計算する。
+│       ├── <----- ここにとっておいたhold-out setを使って、1-Levelから2-LevelへのマージをGBDT + Linear分類器で計算してしまうのも手
+
+├── main.py
+├── main.py~
+├── main_pca.py
+├── preprocess
+│   ├── __init__.py
+│   ├── __init__.pyc
+│   ├── feat_filter.py
+│   ├── feat_filter.pyc
+│   ├── feat_filter.py~
+│   ├── feat_transform.py
+│   ├── feat_transform.pyc
+│   └── feat_transform.py~
+└── utils
+    ├── __init__.py
+    ├── __init__.pyc
+    ├── config_utils.py
+    ├── config_utils.pyc
+    ├── config_utils.py~
+    ├── submit_utils.py
+    └── submit_utils.pyc
+

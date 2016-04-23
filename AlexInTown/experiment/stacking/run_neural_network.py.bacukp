@@ -1,0 +1,56 @@
+# -*- coding: utf-8 -*-
+
+__author__ = 'AlexInTown'
+
+def float32(k):
+    return np.cast['float32'](k)
+
+def make_nn_instance():
+
+    from nolearn.lasagne import NeuralNet
+    from lasagne import layers
+    from lasagne.updates import nesterov_momentum
+    import theano
+    import numpy as np
+
+    layers=[  # three layers: one hidden layer
+        ('i', layers.InputLayer),
+        ('h1', layers.DenseLayer),
+        ('h2', layers.DenseLayer),
+        ('o', layers.DenseLayer),
+        ]
+
+    net = NeuralNet(
+        # settin neural net
+        layers=layers, 
+
+        # layer parameters:
+        input_shape=(None, 307),  # 96x96 input pixels per batch
+        h1_num_units=100,  # number of units in hidden layer
+        h2_num_units=100,  # number of units in hidden layer
+        output_nonlinearity=None,  # output_nonlinearity=softmax
+        output_num_units=1,   #output_num_units=num_classes
+        
+        #job number
+        #n_jobs=-1
+        
+        # optimization method:
+        update=nesterov_momentum, #update=adagrad
+        #update_learning_rate=theano.shared(float32(0.01)), #0.01
+        update_learning_rate=0.01,
+        update_momentum=0.9,
+
+        # external variables
+        regression=0,  # flag to indicate we're dealing with regression problem
+        max_epochs=20,  # we want to train this many epochs
+        verbose=1
+        )
+
+    return net
+
+def nn_fit(nn):
+    from experiment.stacking.experiment_l1 import ExperimentL1
+    exp = ExperimentL1(train_fname='standard_train.csv', 
+                       test_fname='standard_test.csv')
+    nn.fit(exp.train_x, exp.train_y)
+    print type(nn)

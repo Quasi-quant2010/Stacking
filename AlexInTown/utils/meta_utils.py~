@@ -1,0 +1,41 @@
+# -*- coding: utf-8 -*-
+
+import os
+import sys
+import json
+
+import pandas as pd
+
+from utils.config_utils import Config
+
+def combine_meta_features(stack_setting_):
+
+    #data_folder = stack_setting_['1-Level' ]['meta_features']
+    #fname = stack_setting_['setting']['name']
+    #fname = os.path.join(Config.get_string('data.path'), data_folder, fname)
+
+    tmp = []
+    for model_name in stack_setting_['1-Level'].keys():
+        try:
+            folder = stack_setting_['1-Level'][model_name]['meta_feature']['folder']
+            train_fname = stack_setting_['1-Level'][model_name]['meta_feature']['train']
+            train_fname = os.path.join(Config.get_string('data.path'), folder, train_fname)
+            #data1.columns.values
+            train = pd.read_csv(train_fname)
+            col_name = train.columns.values[0]
+            X_train = train[col_name]
+            col_name = train.columns.values[-1]
+            y_train = train[col_name]
+            tmp.append(X_train)
+
+            #test_fname = stack_setting_['1-Level'][model_name]['meta_feature']['test']
+            #test_fname = os.path.join(Config.get_string('data.path'), folder, test_fname)
+
+        except:
+            pass
+
+    tmp.append(y_train)
+    train = pd.concat(tmp, ignore_index=e, axis=1)
+    print train.head(100)
+
+    return True

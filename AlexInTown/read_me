@@ -1,0 +1,90 @@
+model scoreをかえるには、
+ param_search.py
+を変更
+
+
+.
+├── README.md
+├── config.xml
+├── examples
+│   ├── __init__.py
+│   ├── pca.py
+│   └── pca.py~
+├── experiment
+│   ├── __init__.py
+│   ├── __init__.pyc
+│   ├── blending
+│   │   ├── __init__.py
+│   │   ├── __init__.pyc
+│   │   ├── experiment_blend.py
+│   │   ├── experiment_blend.pyc
+│   │   ├── experiment_blend.py~
+│   │   ├── run_ridge_grid_search.py
+│   │   ├── run_ridge_grid_search.pyc
+│   │   └── run_ridge_grid_search.py~
+│   ├── metrics.py
+│   ├── metrics.pyc
+│   ├── metrics.py~
+│   ├── model_wrappers.py
+│   ├── model_wrappers.pyc
+│   ├── model_wrappers.py~
+│   ├── param_search.py
+│   ├── param_search.pyc
+│   ├── param_search.py~
+│   └── stacking
+│       ├── __init__.py
+│       ├── __init__.pyc
+│       ├── experiment_l1.backup.py
+│       ├── experiment_l1.py
+│       ├── experiment_l1.pyc
+│       ├── experiment_l1.py~
+│       ├── run_adaboost_param_search.py
+│       ├── run_gbdt_plus_liner_classifier_grid_search.20160414.py
+│       ├── run_gbdt_plus_liner_classifier_grid_search.py
+│       ├── run_gbdt_plus_liner_classifier_grid_search.pyc
+│       ├── run_gbdt_plus_liner_classifier_grid_search.py~
+│       ├── run_knn_grid_search.py
+│       ├── run_knn_grid_search.pyc
+│       ├── run_knn_grid_search.py~
+│       ├── run_lr_param_search.py
+│       ├── run_neural_network.py
+│       ├── run_neural_network.py.bacukp
+│       ├── run_rand_forest_grid_search.py
+│       ├── run_rand_forest_grid_search.pyc
+│       ├── run_rand_forest_grid_search.py~
+│       ├── run_svc_param_search.py
+│       ├── run_xgb_param_search.py
+│       ├── run_xgb_param_search.pyc
+│       └── run_xgb_param_search.py~
+├── main.log
+├── main.py
+├── main.py~
+├── main_pca.py
+├── preprocess
+│   ├── __init__.py
+│   ├── __init__.pyc
+│   ├── feat_filter.py
+│   ├── feat_filter.pyc
+│   ├── feat_filter.py~
+│   ├── feat_transform.py
+│   ├── feat_transform.pyc
+│   └── feat_transform.py~
+├── read_me
+├── read_me~
+├── utils
+│   ├── __init__.py
+│   ├── __init__.pyc
+│   ├── config_utils.py
+│   ├── config_utils.pyc
+│   ├── config_utils.py~
+│   ├── json_utils.py
+│   ├── json_utils.pyc
+│   ├── json_utils.py~
+│   ├── meta_utils.py
+│   ├── meta_utils.pyc
+│   ├── meta_utils.py~
+│   ├── submit_utils.py
+│   └── submit_utils.pyc
+└── xgb-grid-scores2.csv
+
+6 directories, 76 files

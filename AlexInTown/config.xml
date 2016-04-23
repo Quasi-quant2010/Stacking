@@ -1,0 +1,57 @@
+<config>
+    <profiles>
+        <profile>
+            <!-- this profile is for oyz windows platform -->
+            <id>oyz_win</id>
+            <activation>
+                <os>
+                    <family>windows</family>
+                </os>
+            </activation>
+            <properties>
+                <!-- Path for dataset, model and prediction outputs. -->
+                <data.path>D:/WORK_DIRECTORY/DATASET/Santander/</data.path>
+                <!-- <data.path>/input/ for raw dataset and preprocess dataset -->
+                <!-- <data.path>/model/ for trained model and cross validation result -->
+                <!-- <data.path>/output/ for temp results  -->
+                <!-- <data.path>/submission/ for submissions  -->
+            </properties>
+        </profile>
+        <profile>
+            <!-- this profile is for oyz windows platform -->
+            <id>oyz_win1</id>
+            <activation>
+                <os>
+                    <family>windows</family>
+                </os>
+            </activation>
+            <properties>
+                <!-- Path for dataset, model and prediction outputs. -->
+                <data.path>D:/DATASET/Santander/</data.path>
+                <!-- <data.path>/input/ for raw dataset and preprocess dataset -->
+                <!-- <data.path>/model/ for trained model and cross validation result -->
+                <!-- <data.path>/output/ for temp results  -->
+                <!-- <data.path>/submission/ for submissions  -->
+            </properties>
+        </profile>
+
+        <profile>
+            <id>oyz_linux</id>
+            <activation>
+                <os>
+                    <family>linux</family>
+                </os>
+            </activation>
+            <properties>
+                <!-- Path for dataset, model and prediction outputs. -->
+                <data.path>/home/tanakai/data/sklearn/stacking/</data.path>
+                <!-- <data.path>/input/ for raw dataset and preprocess dataset -->
+                <!-- <data.path>/model/ for trained model and cross validation result -->
+                <!-- <data.path>/output/ for temp results  -->
+                <!-- <data.path>/submission/ for submissions  -->
+            </properties>
+        </profile>
+
+        <!-- add your custom profiles here  -->
+    </profiles>
+</config>
