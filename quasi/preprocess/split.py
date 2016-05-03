@@ -8,9 +8,9 @@ class File_Split:
 
     """
      fs = File_Split(test_size=0.5)
-     fs.__iter__(fname='/home/tanakai/data/sklearn/stacking/input/adult.data.csv',
-                 train_fname='/home/tanakai/data/sklearn/stacking/input/adult.data_train.csv',
-                 test_fname='/home/tanakai/data/sklearn/stacking/input/adult.data_test.csv')
+     fs.__iter__(fname='/home/username/data/sklearn/stacking/input/adult.data.csv',
+                 train_fname='/home/username/data/sklearn/stacking/input/adult.data_train.csv',
+                 test_fname='/home/username/data/sklearn/stacking/input/adult.data_test.csv')
     """
 
     def __init__(self, test_size=0.2, random_state=0):
