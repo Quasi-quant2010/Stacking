@@ -44,7 +44,7 @@
             </activation>
             <properties>
                 <!-- Path for dataset, model and prediction outputs. -->
-                <data.path>/home/tanakai/data/sklearn/stacking/</data.path>
+                <data.path>/home/username/data/sklearn/stacking/</data.path>
                 <!-- <data.path>/input/ for raw dataset and preprocess dataset -->
                 <!-- <data.path>/model/ for trained model and cross validation result -->
                 <!-- <data.path>/output/ for temp results  -->
